@@ -1,4 +1,6 @@
-package geral;
+package geral.process_control;
+
+import geral.App;
 
 public class CoordinatorKiller extends Thread {
 

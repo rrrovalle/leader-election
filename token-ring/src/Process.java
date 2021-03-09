@@ -40,22 +40,22 @@ public class Process {
 
         // If there's no coordinator yet
         if(!reqResult)
-            this.doElection();
+            this.startElection();
 
-        System.out.println("Requisition process is finish!");
+        System.out.println("Requisition process is over!");
         return reqResult;
     }
 
     private boolean receiveReq(int pIdReqOrigin){
         /** REQUISITION CODE HERE */
-        System.out.println("Process Requisition: "+pIdReqOrigin+" was successfully received!");
+        System.out.println("Process Requisition: " + pIdReqOrigin + " was successfully received!");
         return true;
     }
 
-    private void doElection(){
-        System.out.println("Election was started!");
+    private void startElection(){
+        System.out.println("It's time to elect a new coordinator! The election has begun!");
 
-        /** First of all we check all process, adding each one in a new list */
+        /** First of all we check all process, adding each one in a new list */	
         LinkedList<Integer> idCheckedProcess = new LinkedList<>();
         for(Process p : Ring.activeProcess){
             p.checkProcess(idCheckedProcess);
@@ -74,7 +74,7 @@ public class Process {
         updateResult = updateCoordinator(idNewCoordinator);
 
         if(updateResult){
-            System.out.println("Election is finished! The process that was elected is "+idNewCoordinator);
+            System.out.println("The election is finished! Winner: " + idNewCoordinator);
         }else{
             System.out.println("Election was over and no one was elected.");
         }

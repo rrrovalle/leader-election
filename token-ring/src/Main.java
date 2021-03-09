@@ -6,6 +6,6 @@ public class Main {
         logicRing.createProcess();
         logicRing.doRequisition();
         logicRing.setCoordinatorInactive();
-        logicRing.doProcessInactive();
+        logicRing.killProcess();
     }
 }

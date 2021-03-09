@@ -1,4 +1,7 @@
-package geral;
+package geral.process_control;
+
+import geral.App;
+import geral.Process;
 
 public class ProcessGenerator extends Thread {
 	

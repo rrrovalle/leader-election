@@ -7,6 +7,11 @@ import java.util.LinkedList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import geral.process_control.CoordinatorKiller;
+import geral.process_control.ProcessGenerator;
+import geral.process_control.ProcessKiller;
+import geral.process_control.RequestMaker;
+
 public class App {
 	
 	public static final Lock processesLock    = new ReentrantLock();

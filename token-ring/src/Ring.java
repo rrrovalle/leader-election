@@ -70,7 +70,7 @@ public class Ring {
         }).start();
     }
 
-    public void doProcessInactive() {
+    public void killProcess() {
         new Thread(new Runnable() {
             @Override
             public void run() {

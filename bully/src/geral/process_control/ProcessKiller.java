@@ -1,6 +1,9 @@
-package geral;
+package geral.process_control;
 
 import java.util.Random;
+
+import geral.App;
+import geral.Process;
 
 public class ProcessKiller extends Thread {
 	
